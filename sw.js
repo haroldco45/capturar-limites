@@ -1,11 +1,11 @@
 /* Capturar límites — Service Worker
    Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados */
-const VERSION = 'capturar-limites-v1';
+const VERSION = 'capturar-limites-v2';
 const TILES = 'capturar-limites-tiles';
 const BASICOS = [
   './', './index.html', './manifest.json',
-  './vendor/leaflet.js', './vendor/leaflet.css',
-  './img/icon-192.png', './img/icon-512.png', './img/icon-maskable-512.png', './img/favicon.png'
+  './leaflet.js', './leaflet.css',
+  './icon-192.png', './icon-512.png', './icon-maskable-512.png', './favicon.png'
 ];
 
 self.addEventListener('install', e => {
