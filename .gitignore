@@ -1,0 +1,8 @@
+# Nunca subir datos de vecinos ni configuración con claves
+data/
+*.jsonl
+barrios-*.json
+.env
+node_modules/
+.DS_Store
+Thumbs.db
