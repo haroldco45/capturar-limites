@@ -169,6 +169,14 @@ textarea{
 }
 #brindis.ver{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* En pantalla ancha el contenido se centra: leerlo a lo largo de 1900 px es incómodo */
+@media (min-width:660px){
+  header, .control{padding-left:calc((100% - 600px) / 2);padding-right:calc((100% - 600px) / 2)}
+  .hoja{left:50%;right:auto;width:600px;transform:translate(-50%,101%);border-radius:18px 18px 0 0}
+  .hoja.abierta{transform:translate(-50%,0)}
+  .btn.grande{font-size:18px}
+}
+
 .pie{border-top:1px solid var(--linea);margin-top:16px;padding-top:13px;
   font-size:11px;color:var(--humo);line-height:1.6;text-align:center}
 </style>
