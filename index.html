@@ -533,7 +533,7 @@ function mostrarPosicion() {
       ? `Señal floja (±${a} m). Espera unos segundos antes de marcar: quieto se afina sola.`
       : puntos.length === 0
         ? 'Párate en la primera esquina y marca. Después recorre el perímetro en un solo sentido.'
-        : `Vas por la esquina <b>${puntos.length}</b>. Sigue el borde sin devolverte y cierra donde empezaste.`;
+        : `Llevas <b>${puntos.length}</b> esquina${puntos.length > 1 ? 's' : ''}. Sigue el borde sin devolverte y cierra donde empezaste.`;
   }
 }
 
@@ -550,6 +550,7 @@ function marcar(auto) {
   puntos.push([+pos.lat.toFixed(6), +pos.lng.toFixed(6)]);
   pintarTrazo(); refrescarCifras(); guardar();
   if (!auto) {
+    mostrarPosicion();
     aviso(`Esquina ${puntos.length} marcada (±${Math.round(pos.acc)} m)`, 1600);
     if (navigator.vibrate) navigator.vibrate(40);
   }
